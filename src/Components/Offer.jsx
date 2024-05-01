@@ -1,13 +1,18 @@
 import Card from "./Card/Card";
 import { useState, useRef } from "react";
 import PopUp from "./Card/PopUp";
-import writing1 from '../assets/writing1.jpeg'
-import writing2 from '../assets/writing2.jpg'
-import writing3 from '../assets/writing3.jpeg'
-import writing4 from '../assets/writing4.jpeg'
-import writing5 from '../assets/writing5.jpeg'
-import legal1 from '../assets/legal1.jpg'
-import legal2 from '../assets/legal2.jpeg'
+import writing1 from '../assets/writing1.jpeg';
+import writing2 from '../assets/writing2.jpg';
+import writing3 from '../assets/writing3.jpeg';
+import writing4 from '../assets/writing4.jpeg';
+import writing5 from '../assets/writing5.jpeg';
+import legal1 from '../assets/legal1.jpg';
+import legal2 from '../assets/legal2.jpeg';
+import refugee from '../assets/refugee.jpeg';
+import criminal from '../assets/criminal.jpeg';
+import family from '../assets/family.jpeg';
+import worker from '../assets/worker.jpeg';
+import visit from '../assets/visit.jpeg';
 
 const content = [
   {
@@ -64,6 +69,37 @@ const webDev = [
     desc: " Fluid, adaptive web designs ensuring optimal viewing across all devices, from desktops to smartphones.",
   },
 ]
+
+const laws = [
+  {
+    image: refugee,
+    name: "Asylum and Refugee",
+    desc: "Legal assistance for individuals fleeing persecution, seeking asylum or refugee status, navigating complex legal processes, and advocating for protection"
+  },
+  {
+    image: visit,
+    name: "visit visa",
+    desc: "Legal assistance for obtaining visit visas, ensuring compliance with regulations, and navigating application processes for temporary stays in foreign countries."
+  },
+  {
+    image: worker,
+    name: "Skilled Worker Visa",
+    desc: "navigating complex requirements, and assisting with employment-based immigration processes."
+  },
+
+  {
+    image: family,
+    name: "Family law",
+    desc: "Legal support for matters concerning family relationships: divorce, child custody, adoption, paternity, alimony, domestic violence, and related issues."
+  },
+
+  {
+    image: criminal,
+    name: "Criminal law",
+    desc: "Legal representation and defense for individuals accused of committing crimes, encompassing a range of offenses"
+  }
+]
+
 
 export default function Offer() {
   let [open, setOpen] = useState(false);
@@ -138,6 +174,22 @@ export default function Offer() {
           <p className="mt-6 text-lg leading-8 text-gray-700">
             Legal services encompass professional advice, representation, and assistance in matters of law, ensuring rights, compliance, and resolution of legal issues.
           </p>
+          <div className="flex justify-center">
+            <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              {laws.map((item) => (
+                <div
+                  key={item.name}
+                  onClick={() => {
+                    setOpen(true);
+                    setObject(item);
+                  }}
+                  className="flex"
+                >
+                  <Card obj={item} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">

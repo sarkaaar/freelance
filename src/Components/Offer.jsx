@@ -6,8 +6,6 @@ import writing2 from '../assets/writing2.jpg';
 import writing3 from '../assets/writing3.jpeg';
 import writing4 from '../assets/writing4.jpeg';
 import writing5 from '../assets/writing5.jpeg';
-import legal1 from '../assets/legal1.jpg';
-import legal2 from '../assets/legal2.jpeg';
 import refugee from '../assets/refugee.jpeg';
 import criminal from '../assets/criminal.jpeg';
 import family from '../assets/family.jpeg';
@@ -86,13 +84,11 @@ const laws = [
     name: "Skilled Worker Visa",
     desc: "navigating complex requirements, and assisting with employment-based immigration processes."
   },
-
   {
     image: family,
     name: "Family law",
     desc: "Legal support for matters concerning family relationships: divorce, child custody, adoption, paternity, alimony, domestic violence, and related issues."
   },
-
   {
     image: criminal,
     name: "Criminal law",
@@ -104,6 +100,8 @@ const laws = [
 export default function Offer() {
   let [open, setOpen] = useState(false);
   let [object, setObject] = useState(false);
+  let [cont, setCont] = useState(4);
+  let [leg, setLeg] = useState(4);
 
   const cancelButtonRef = useRef(null);
   return (
@@ -152,19 +150,22 @@ export default function Offer() {
           </p>
           <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
-              {content.map((stat) => (
+              {content.slice(0, cont).map((item) => (
                 <div
-                  key={stat.name}
+                  key={item.name}
                   onClick={() => {
                     setOpen(true);
-                    setObject(stat);
+                    setObject(item);
                   }}
                   className="flex"
                 >
-                  <Card obj={stat} />
+                  <Card obj={item} />
                 </div>
               ))}
             </div>
+          </div>
+          <div className="grid justify-items-end">
+            {(content.length > 4 && cont === 4) ? <button className="" onClick={() => setCont(content.length)}>See More&rarr;</button> : <></>}
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -176,7 +177,37 @@ export default function Offer() {
           </p>
           <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
-              {laws.map((item) => (
+              {laws.slice(0, leg).map((item) => (
+                <div
+                  key={item.name}
+                  onClick={() => {
+                    setOpen(true);
+                    setObject(item);
+                  }}
+                  className="flex"
+                >
+                  <Card obj={item} />
+                </div>
+              ))}
+              {/* {(laws.length > 4 && leg === 4) ? <button className="flex flex-end" onClick={() => setLeg(content.length)}>See More...</button> : <></>} */}
+
+            </div>
+          </div>
+        </div>
+        <div className="grid justify-items-end">
+            {(laws.length > 4 && leg === 4) ? <button className="" onClick={() => setLeg(content.length)}>See More&rarr;</button> : <></>}
+          </div>
+
+        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
+            Web Services
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-700">
+            Premium Web Development Services to Elevate Your Online Presence.
+          </p>
+          <div className="flex justify-center">
+            <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              {webDev.map((item) => (
                 <div
                   key={item.name}
                   onClick={() => {
@@ -191,30 +222,32 @@ export default function Offer() {
             </div>
           </div>
         </div>
+
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
-            Web Services
+            Cleaning Services
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-700">
-            Premium Web Development Services to Elevate Your Online Presence.
+            The company offers comprehensive cleaning services, including residential and commercial cleaning, deep cleaning, sanitation, organizing, and eco-friendly cleaning solutions.
           </p>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
-              {webDev.map((stat) => (
+              {webDev.map((item) => (
                 <div
-                  key={stat.name}
+                  key={item.name}
                   onClick={() => {
                     setOpen(true);
-                    setObject(stat);
+                    setObject(item);
                   }}
                   className="flex"
                 >
-                  <Card obj={stat} />
+                  <Card obj={item} />
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
+
       </div>
       <PopUp
         obj={object}

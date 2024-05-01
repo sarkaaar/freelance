@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import logo from '../assets/logo.svg'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Services', href: '#' },
+  { name: 'Content Writing', href: '#' },
+  { name: 'Contact Us ', href: '#' },
+  { name: 'About Us', href: '#' },
 ]
 
 export default function Example() {
@@ -21,7 +22,7 @@ export default function Example() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src={logo}
                 alt=""
               />
             </a>
@@ -57,7 +58,7 @@ export default function Example() {
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  src={logo}
                   alt=""
                 />
               </a>
@@ -111,14 +112,14 @@ export default function Example() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          
+
           <div className="text-center">
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Hi There, This is Abdul Wali.
+              Hi There, This is
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Content Writer and Your Legal Consultant
+              Your One-Stop Shop for Your Freelance Needs.
             </h1>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">

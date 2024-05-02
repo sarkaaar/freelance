@@ -1,15 +1,21 @@
-const links = [
-    { name: 'Open roles', href: '#' },
-    { name: 'Internship program', href: '#' },
-    { name: 'Our values', href: '#' },
-    { name: 'Meet our leadership', href: '#' },
-  ]
-  const stats = [
-    { name: 'Offices worldwide', value: '12' },
-    { name: 'Full-time colleagues', value: '300+' },
-    { name: 'Hours per week', value: '40' },
-    { name: 'Paid time off', value: 'Unlimited' },
-  ]
+
+const whyus = [
+  // {
+  //   name: 'Integrated Service Offerings',
+  //   desc: "Whether you're looking for compelling content, expert legal advice, or cutting-edge web solutions, we've got you covered. Our multidisciplinary approach means you get comprehensive solutions tailored to your needs—all from one trusted provider."
+  // },
+  {
+    name: 'Expertise and Experience',
+    desc: 'Our team is made up of industry veterans with years of experience. Content creators who craft persuasive and engaging narratives, legal advisors who navigate complex regulations with ease, and web developers who turn digital dreams into reality—whatever your challenge, our experts are ready to meet it.'
+  },
+  {
+    name: 'Client-Centric Approach',
+    desc: 'We listen to our clients and truly understand their objectives. This client-focused mindset allows us to deliver personalized services that not only meet but exceed expectations. Your success is our success, and we are dedicated to fostering long-term partnerships.'
+  },{
+    name: 'Quality and Precision',
+    desc: 'With a keen eye for detail and a commitment to quality, we ensure that every piece of content, legal contract, or web application isn’t just delivered, but perfected. We pride ourselves on flawless execution and exceptional outcomes.'
+  },
+]
   
   export default function WhyUs() {
     return (
@@ -47,11 +53,21 @@ const links = [
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+            At There and Then, we bring a unique blend of talent, passion, and professionalism to every project. Here’s why we stand out:
             </p>
           </div>
-          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+
+          <div className="mt-4">
+            {whyus.map((item)=>{
+              return(
+              <div key={item}>
+                <h3 className="text-xl font-bold leading-9 tracking-tight text-slate-100">{item.name}</h3>
+                <p className="mb-2  leading-8 text-gray-200">{item.desc}</p>
+                </div>
+                )}
+          )}
+          </div>
+          {/* <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               {links.map((link) => (
                 <a key={link.name} href={link.href}>
@@ -67,7 +83,7 @@ const links = [
                 </div>
               ))}
             </dl>
-          </div>
+          </div> */}
         </div>
       </div>
     )

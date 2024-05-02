@@ -9,7 +9,7 @@ export default function ContactUs() {
     return <p>Thanks for joining!</p>;
   }
   return (
-    <section id="contactUs" className="bg-slate-900 ">
+    <section id="contactus" className="bg-slate-900 ">
       <div className="relative isolate overflow-hidden flex justify-center bg-slate-300 py-24 sm:py-32">
         <div className="max-w-7xl w-full">
           <div className="isolate px-6 py-24 sm:py-32 lg:px-8 bg-slate-">
@@ -17,7 +17,7 @@ export default function ContactUs() {
               <div className="sm:w-1/2">
                 <div className="flex justify-center items-center">
                   <div className="w-10/12 lg:pt-36 text-6xl  pb-8">
-                    <h1 className="text-3xl sm:text-8xl">We're Here to Help!</h1>
+                    <h1 className="text-3xl sm:text-8xl">We&apos;re Here to Help!</h1>
                     <p className="text-lg text-gray-700 pt-8">
                       Got questions? Need a quote? We’re just a message away!
                     </p>

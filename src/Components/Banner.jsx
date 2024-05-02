@@ -4,11 +4,12 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.svg'
 
 const navigation = [
-  { name: 'Why Us', href: '#whyus' },
-  { name: 'Services', href: '#services' },
-  { name: 'Content Writing', href: '#content' },
-  { name: 'Legal Services', href: '#legal' },
-  { name: 'Contact Us ', href: '#contactus' }
+  { name: 'Why Us', href: '#whyus' ,current: false},
+  { name: 'Services', href: '#services' ,current: false},
+  { name: 'Content Writing', href: '#content' ,current: false},
+  { name: 'Legal Services', href: '#legal' ,current: false},
+  { name: 'Web Services', href: '#web' ,current: false},
+  { name: 'Contact Us ', href: '#contactus' ,current: false}
 ]
 
 export default function Banner() {
@@ -125,12 +126,12 @@ export default function Banner() {
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#services"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Our Services
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="#contactus" className="text-sm font-semibold leading-6 text-gray-900">
                 Contact Us <span aria-hidden="true">→</span>
               </a>
             </div>

@@ -19,6 +19,7 @@ import tech2 from '../assets/tech2.png'
 import tech3 from '../assets/tech3.jpg'
 import tech4 from '../assets/tech4.webp'
 import cleaning from '../assets/cleaning.jpeg'
+import mot from '../assets/mot.jpg'
 
 const content = [
   {
@@ -123,6 +124,16 @@ const cleaningServ = [
   }
 ]
 
+
+const motser = [
+  {
+    image: mot,
+    name: "MOT Service Services",
+    desc: "Book your MOT service with us today for thorough inspections, repairs, and advisory reports, ensuring your vehicle's roadworthiness!"
+  }
+]
+
+
 export default function Offer() {
   let [open, setOpen] = useState(false);
   let [object, setObject] = useState(false);
@@ -136,7 +147,6 @@ export default function Offer() {
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
       >
-
         <div
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
           style={{
@@ -157,6 +167,7 @@ export default function Offer() {
           }}
         />
       </div>
+      <section id="services">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
@@ -167,6 +178,7 @@ export default function Offer() {
             Immigration Consulting, and Innovative IT Solutions
           </p>
         </div>
+        <section id="content">
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Content Writing
@@ -193,7 +205,9 @@ export default function Offer() {
           <div className="grid justify-items-end">
             {(content.length > 4 && cont === 4) ? <button className="" onClick={() => setCont(content.length)}>See More&rarr;</button> : <></>}
           </div>
-        </div>
+       </div>    
+        </section>
+        <section id="legal">
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Legal Services
@@ -223,7 +237,36 @@ export default function Offer() {
         <div className="grid justify-items-end">
           {(laws.length > 4 && leg === 4) ? <button className="" onClick={() => setLeg(content.length)}>See More&rarr;</button> : <></>}
         </div>
+        </section>
 
+        <section id="mot">
+        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
+            MOT Services
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-700">
+            Premium Web Development Services to Elevate Your Online Presence.
+          </p>
+          <div className="flex justify-center">
+            <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              {motser.map((item) => (
+                <div
+                  key={item.name}
+                  onClick={() => {
+                    setOpen(true);
+                    setObject(item);
+                  }}
+                  className="flex"
+                >
+                  <Card obj={item} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section id="web">
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Web Services
@@ -248,6 +291,7 @@ export default function Offer() {
             </div>
           </div>
         </div>
+        </section>
 
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
@@ -291,6 +335,7 @@ export default function Offer() {
         </div>
 
       </div>
+      </section>
       <PopUp
         obj={object}
         setOpen={setOpen}

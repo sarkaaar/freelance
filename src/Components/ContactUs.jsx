@@ -26,7 +26,7 @@ export default function ContactUs() {
                     </p>
                     <div className="mt-12 flex">
                       <img src={call} className="w-6 h-6" />
-                      <p className="text-lg text-gray-700 pl-4">+92302 55 08 945</p>
+                      <p className="text-lg text-gray-700 pl-4">07375863608</p>
                     </div>
                     <div className=" flex pt-4">
                       <img src={mail} className="w-6 h-6" />

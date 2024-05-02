@@ -1,8 +1,6 @@
 import { useForm } from "@formspree/react";
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(" ");
-// }
+import call from '../assets/call.svg'
+import mail from '../assets/mail.svg'
 
 export default function ContactUs() {
   const [state, handleSubmit] = useForm("xrgweqdo");
@@ -11,65 +9,36 @@ export default function ContactUs() {
     return <p>Thanks for joining!</p>;
   }
   return (
-    <section id="contactUs" className="bg-slate-100 ">
-      <div className="relative isolate overflow-hidden flex justify-center bg-slate-200 py-24 sm:py-32">
-        {/* <div
-          className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
-        <div
-          className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div> */}
-
+    <section id="contactUs" className="bg-slate-900 ">
+      <div className="relative isolate overflow-hidden flex justify-center bg-slate-300 py-24 sm:py-32">
         <div className="max-w-7xl w-full">
           <div className="isolate px-6 py-24 sm:py-32 lg:px-8 bg-slate-">
-            {/* <div
-              className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-              aria-hidden="true"
-            >
-              <div
-                className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-              />
-            </div> */}
             <div className="lg:flex">
-              <div className="w-1/2">
+              <div className="sm:w-1/2">
                 <div className="flex justify-center items-center">
-                  <div className="w-10/12 lg:pt-48 text-6xl sm:text-8xl pb-8">
-                    <h1 className="">Wanna</h1>
-                    <h1 className="">make</h1>
-                    <h1 className="">Something</h1>
-                    <h1 className="animate-pulse font-bold text-slate-600">
-                      Incredible.
-                    </h1>
+                  <div className="w-10/12 lg:pt-36 text-6xl  pb-8">
+                    <h1 className="text-3xl sm:text-8xl">We're Here to Help!</h1>
+                    <p className="text-lg text-gray-700 pt-8">
+                      Got questions? Need a quote? We’re just a message away!
+                    </p>
+                    <p className="text-lg text-gray-700 pt-4">
+                      Reach out to us anytime with your inquiries, and we will get back to you as soon as possible.
+                    </p>
+                    <div className="mt-12 flex">
+                      <img src={call} className="w-6 h-6" />
+                      <p className="text-lg text-gray-700 pl-4">+92302 55 08 945</p>
+                    </div>
+                    <div className=" flex pt-4">
+                      <img src={mail} className="w-6 h-6" />
+                      <p className="text-lg text-gray-700 pl-4">waliabdul91@gmail.com</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="lg:w-1/2 bg-slate-100 rounded-lg p-8">
                 <div className="mx-auto max-w-2xl text-center">
-                  <p className="mt-2 text-lg leading-8">
-                    Feel free to reach out if you&apos;re looking for a developer,
-                    have a question, or just want to connect.
+                  <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
+                    Contact Us
                   </p>
                 </div>
                 <form

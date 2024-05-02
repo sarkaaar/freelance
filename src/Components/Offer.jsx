@@ -11,6 +11,14 @@ import criminal from '../assets/criminal.jpeg';
 import family from '../assets/family.jpeg';
 import worker from '../assets/worker.jpeg';
 import visit from '../assets/visit.jpeg';
+import cv from '../assets/cv.jpg';
+import health from '../assets/health.webp';
+import marketing from '../assets/marketing.jpg';
+import tech1 from '../assets/tech1.jpg'
+import tech2 from '../assets/tech2.png'
+import tech3 from '../assets/tech3.jpg'
+import tech4 from '../assets/tech4.webp'
+import cleaning from '../assets/cleaning.jpeg'
 
 const content = [
   {
@@ -39,11 +47,17 @@ const content = [
     desc: "Includes writing for corporate communications, such as reports, proposals, memos, and business correspondence.",
   },
   {
+    image: marketing,
     name: "Marketing",
     desc: " Involves creating promotional materials like advertisements, brochures, website content, and social media posts.",
   },
-  { name: "Health and Medicine", desc: "Health and medicine writing encompasses research, education, policy advocacy, patient communication, scientific reporting, and medical marketing across diverse platforms." },
   {
+    image: health,
+    name: "Health and Medicine",
+    desc: "Health and medicine writing encompasses research, education, policy advocacy, patient communication, scientific reporting, and medical marketing across diverse platforms."
+  },
+  {
+    image: cv,
     name: "CV Building",
     desc: "Summarize education, experience, skills, and achievements. Keep it concise, organized, error-free, and tailored to the job you're applying for.",
   },
@@ -51,18 +65,22 @@ const content = [
 
 const webDev = [
   {
+    image: tech1,
     name: "Custom Website Design",
     desc: "Tailor-made designs that uniquely reflect your brand and engage your audience.",
   },
   {
+    image: tech2,
     name: "E-commerce Solutions",
     desc: "Comprehensive online store setups that provide seamless shopping experiences and boost sales.",
   },
   {
+    image: tech3,
     name: "CMS Development",
     desc: "Customizable Content Management Systems that empower you to manage and update content effortlessly.",
   },
   {
+    image: tech4,
     name: "Responsive Web Design",
     desc: " Fluid, adaptive web designs ensuring optimal viewing across all devices, from desktops to smartphones.",
   },
@@ -96,6 +114,14 @@ const laws = [
   }
 ]
 
+
+const cleaningServ = [
+  {
+    image: cleaning,
+    name: "Cleaning Services",
+    desc: "The company offers comprehensive cleaning services, including residential and commercial cleaning, deep cleaning, sanitation, organizing, and eco-friendly cleaning solutions."
+  }
+]
 
 export default function Offer() {
   let [open, setOpen] = useState(false);
@@ -195,8 +221,8 @@ export default function Offer() {
           </div>
         </div>
         <div className="grid justify-items-end">
-            {(laws.length > 4 && leg === 4) ? <button className="" onClick={() => setLeg(content.length)}>See More&rarr;</button> : <></>}
-          </div>
+          {(laws.length > 4 && leg === 4) ? <button className="" onClick={() => setLeg(content.length)}>See More&rarr;</button> : <></>}
+        </div>
 
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
@@ -228,8 +254,24 @@ export default function Offer() {
             Cleaning Services
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-700">
-            The company offers comprehensive cleaning services, including residential and commercial cleaning, deep cleaning, sanitation, organizing, and eco-friendly cleaning solutions.
+          Spotless Solutions: Premier Cleaning Services for Every Space
           </p>
+          <div className="flex justify-center">
+            <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              {cleaningServ.map((item) => (
+                <div
+                  key={item.name}
+                  onClick={() => {
+                    setOpen(true);
+                    setObject(item);
+                  }}
+                  className="flex"
+                >
+                  <Card obj={item} />
+                </div>
+              ))}
+            </div>
+          </div>
           {/* <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
               {webDev.map((item) => (

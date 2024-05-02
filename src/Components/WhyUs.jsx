@@ -11,20 +11,16 @@ const whyus = [
   {
     name: 'Client-Centric Approach',
     desc: 'We listen to our clients and truly understand their objectives. This client-focused mindset allows us to deliver personalized services that not only meet but exceed expectations. Your success is our success, and we are dedicated to fostering long-term partnerships.'
-  },{
+  }, {
     name: 'Quality and Precision',
     desc: 'With a keen eye for detail and a commitment to quality, we ensure that every piece of content, legal contract, or web application isn’t just delivered, but perfected. We pride ourselves on flawless execution and exceptional outcomes.'
   },
 ]
-  
-  export default function WhyUs() {
-    return (
+
+export default function WhyUs() {
+  return (
+    <section id="whyus">
       <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        {/* <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-          alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-        /> */}
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
           aria-hidden="true"
@@ -53,39 +49,22 @@ const whyus = [
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-            At There and Then, we bring a unique blend of talent, passion, and professionalism to every project. Here’s why we stand out:
+              At There and Then, we bring a unique blend of talent, passion, and professionalism to every project. Here’s why we stand out:
             </p>
           </div>
 
           <div className="mt-4">
-            {whyus.map((item)=>{
-              return(
-              <div key={item}>
-                <h3 className="text-xl font-bold leading-9 tracking-tight text-slate-100">{item.name}</h3>
-                <p className="mb-2  leading-8 text-gray-200">{item.desc}</p>
+            {whyus.map((item) => {
+              return (
+                <div key={item.name}>
+                  <h3 className="text-xl font-bold leading-9 tracking-tight text-slate-100">{item.name}</h3>
+                  <p className="mb-2 leading-8 text-gray-200">{item.desc}</p>
                 </div>
-                )}
-          )}
+              )
+            })}
           </div>
-          {/* <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              {links.map((link) => (
-                <a key={link.name} href={link.href}>
-                  {link.name} <span aria-hidden="true">&rarr;</span>
-                </a>
-              ))}
-            </div>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.name} className="flex flex-col-reverse">
-                  <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
-                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div> */}
         </div>
       </div>
-    )
-  }
-  
+    </section>
+  )
+}

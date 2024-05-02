@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.svg'
+import logoName from '../assets/logoName.svg'
 
 const navigation = [
   { name: 'Why Us', href: '#whyus' ,current: false},
@@ -23,8 +24,8 @@ export default function Banner() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
-                src={logo}
+                className="h-11 w-auto"
+                src={logoName}
                 alt=""
               />
             </a>

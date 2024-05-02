@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 const navigation = {
 
   social: [
@@ -51,19 +49,19 @@ const navigation = {
         </svg>
       ),
     },
-   
+
   ],
 }
 
 export default function Footer() {
   // const [date, setDate]
-  
+
   // useEffect
   return (
     <footer className="bg-slate-900 ">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-          
+
         </nav>
         <div className="mt-10 flex justify-center space-x-10">
           {navigation.social.map((item) => (

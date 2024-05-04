@@ -16,7 +16,8 @@ function App() {
       <Footer />
 
       <div className="fixed bottom-12 right-12 hover:bottom-11 hover:right-11 w-10 h-10 hover:w-12 hover:h-12">
-        <form action="https://web.whatsapp.com/send" target="_blank">
+        {/* <form action="https://web.whatsapp.com/send" target="_blank"> */}
+        <form action="https://wa.me/923025508945" target="_blank" data-channel="Whatsapp" >
           <input type="hidden" name="phone" onChange={nothing} value="971552474351" />
           <input className="hidden" name="text" type="text" onChange={nothing} value="Hi, I need Support Regarding"></input>
           <button type="submit" ><img src={whatsapp} /></button>

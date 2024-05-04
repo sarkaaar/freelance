@@ -49,14 +49,9 @@ export default function PopUp(props) {
                         </Dialog.Title>
                         <img src={obj?.image} alt="img" className="w-full" />
                         <div className="mt-2">
-                          <p className="text-sm px-2">
+                          <p className="px-2">
                             {obj?.desc}
                           </p>
-                        </div>
-                        <div className="mt-4 flex gap-4">
-                          {obj?.tech?.map((tech_, index) => {
-                            return (<p key={index} className="flex text-sm transition-transform hover:ease-in-out justify-center bg-gray-600 p-2 px-4 rounded-full hover:bg-gray-900">{tech_}</p>)
-                          })}
                         </div>
                       </div>
                     </div>

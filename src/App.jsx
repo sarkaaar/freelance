@@ -25,21 +25,14 @@ function App() {
             <input className="hidden" name="text" type="text" onChange={nothing} value="Hi, I need Support Regarding"></input>
             <input type="hidden" name="phone" onChange={nothing} value="923025508945" />
             <button type="submit" ><img src={whatsapp} /></button>
-          </form>        </BrowserView>
+          </form>
+        </BrowserView>
         <MobileView>
           <form action="https://wa.me/923025508945" target="_blank" data-channel="Whatsapp" >
             <input className="hidden" name="text" type="text" onChange={nothing} value="Hi, I need Support Regarding"></input>
             <button type="submit" ><img src={whatsapp} /></button>
           </form>
         </MobileView>
-
-
-
-        {/* <form action="https://wa.me/923025508945" target="_blank" data-channel="Whatsapp" >
-          <input type="hidden" name="phone" onChange={nothing} value="971552474351" />
-          <input className="hidden" name="text" type="text" onChange={nothing} value="Hi, I need Support Regarding"></input>
-          <button type="submit" ><img src={whatsapp} /></button>
-        </form> */}
       </div>
     </div>
   );

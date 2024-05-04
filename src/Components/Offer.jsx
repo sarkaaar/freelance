@@ -173,7 +173,7 @@ export default function Offer() {
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
             What We Offer
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 leading-8 text-gray-700">
             Your One-Stop Hub for Professional Content Writing, Trusted Legal
             Immigration Consulting, and Innovative IT Solutions
           </p>
@@ -183,7 +183,7 @@ export default function Offer() {
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Content Writing
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 leading-8 text-gray-700">
             Unlock Your Potential with Our Comprehensive Content Writing Services for Every Need
           </p>
           <div className="flex justify-center">
@@ -212,7 +212,7 @@ export default function Offer() {
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Legal Services
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 leading-8 text-gray-700">
             Legal services encompass professional advice, representation, and assistance in matters of law, ensuring rights, compliance, and resolution of legal issues.
           </p>
           <div className="flex justify-center">
@@ -244,7 +244,7 @@ export default function Offer() {
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             MOT Services
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 leading-8 text-gray-700">
             Premium Web Development Services to Elevate Your Online Presence.
           </p>
           <div className="flex justify-center">
@@ -271,7 +271,7 @@ export default function Offer() {
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Web Services
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 leading-8 text-gray-700">
             Premium Web Development Services to Elevate Your Online Presence.
           </p>
           <div className="flex justify-center">
@@ -297,7 +297,7 @@ export default function Offer() {
           <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
             Cleaning Services
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
+          <p className="mt-6 leading-8 text-gray-700">
           Spotless Solutions: Premier Cleaning Services for Every Space
           </p>
           <div className="flex justify-center">
@@ -316,24 +316,7 @@ export default function Offer() {
               ))}
             </div>
           </div>
-          {/* <div className="flex justify-center">
-            <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
-              {webDev.map((item) => (
-                <div
-                  key={item.name}
-                  onClick={() => {
-                    setOpen(true);
-                    setObject(item);
-                  }}
-                  className="flex"
-                >
-                  <Card obj={item} />
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
-
       </div>
       </section>
       <PopUp

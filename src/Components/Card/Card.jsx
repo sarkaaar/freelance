@@ -10,12 +10,12 @@ export default function Card(obj) {
         <h3 className="font-bold text-lg text-slate-900 h-10 overflow-y-hidden ">
           {name}
         </h3>
-        <h4 className="text-slate-800 text-sm">
+        <p className="text-slate-800 ">
           {desc.slice(0, 70) + "..."}
-          <span className="font-bold text-sm hover:text-slate-900">
+          <span className="font-bold hover:text-slate-900">
             See More
           </span>
-        </h4>
+        </p>
       </div>
     </div>
   );

@@ -128,7 +128,7 @@ const cleaningServ = [
 const motser = [
   {
     image: mot,
-    name: "MOT Service Services",
+    name: "MOT Services",
     desc: "Book your MOT service with us today for thorough inspections, repairs, and advisory reports, ensuring your vehicle's roadworthiness!"
   }
 ]
@@ -245,7 +245,7 @@ export default function Offer() {
             MOT Services
           </p>
           <p className="mt-6 leading-8 text-gray-700">
-            Premium Web Development Services to Elevate Your Online Presence.
+          Get your MOT services booked with us.
           </p>
           <div className="flex justify-center">
             <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">

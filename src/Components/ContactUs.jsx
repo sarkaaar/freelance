@@ -3,10 +3,10 @@ import call from '../assets/call.svg'
 import mail from '../assets/mail.svg'
 
 export default function ContactUs() {
-  const [state, handleSubmit] = useForm("xrgweqdo");
+  const [state, handleSubmit] = useForm("meqynvry");
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks for contacting us!</p>;
   }
   return (
     <section id="contactus" className="bg-slate-900 ">
@@ -26,11 +26,11 @@ export default function ContactUs() {
                     </p>
                     <div className="mt-12 flex">
                       <img src={call} className="w-6 h-6" />
-                      <p className="text-lg text-gray-700 pl-4">07375863608</p>
+                      <p className="text-lg text-gray-700 pl-4">+447375863608</p>
                     </div>
                     <div className=" flex pt-4">
                       <img src={mail} className="w-6 h-6" />
-                      <p className="text-lg text-gray-700 pl-4">waliabdul91@gmail.com</p>
+                      <p className="text-lg text-gray-700 pl-4">thereandthen.tandt@gmail.com</p>
                     </div>
                   </div>
                 </div>

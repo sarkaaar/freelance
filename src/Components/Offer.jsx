@@ -14,12 +14,15 @@ import visit from '../assets/visit.jpeg';
 import cv from '../assets/cv.jpg';
 import health from '../assets/health.webp';
 import marketing from '../assets/marketing.jpg';
-import tech1 from '../assets/tech1.jpg'
-import tech2 from '../assets/tech2.png'
-import tech3 from '../assets/tech3.jpg'
-import tech4 from '../assets/tech4.webp'
-import cleaning from '../assets/cleaning.jpeg'
-import mot from '../assets/mot.jpg'
+import tech1 from '../assets/tech1.jpg';
+import tech2 from '../assets/tech2.png';
+import tech3 from '../assets/tech3.jpg';
+import tech4 from '../assets/tech4.webp';
+import cleaning from '../assets/cleaning.jpeg';
+import mot from '../assets/mot.jpg';
+import success from '../assets/success.jpeg';
+import birth from '../assets/birth.jpeg';
+import aniversary from '../assets/aniversary.jpeg';
 
 const content = [
   {
@@ -134,6 +137,25 @@ const motser = [
 ]
 
 
+const event = [
+  {
+    image: birth,
+    name: "Birthdays",
+    desc: "Make your birthdays unforgettable with us! Professional event planning services tailored to your preferences. Book now for a memorable celebration!"
+  },
+
+  {
+    image: aniversary,
+    name: "Anniversary",
+    desc: "Create cherished anniversary memories with us! Expert event planning services customized to your love story. Reserve your celebration now!"
+  },
+  {
+    image: success,
+    name: "Success Celebrations",
+    desc: "Elevate your success with us! Premier event planning services for your celebratory milestones. Book now for an unforgettable success celebration!"
+  },
+]
+
 export default function Offer() {
   let [open, setOpen] = useState(false);
   let [object, setObject] = useState(false);
@@ -236,6 +258,33 @@ export default function Offer() {
         </div>
         <div className="grid justify-items-end">
           {(laws.length > 4 && leg === 4) ? <button className="" onClick={() => setLeg(content.length)}>See More&rarr;</button> : <></>}
+        </div>
+        </section>
+
+        <section id="event">
+        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <p className="text-2xl font-bold leading-9 tracking-tight text-slate-900">
+            Event Managemant / Planning
+          </p>
+          <p className="mt-6 leading-8 text-gray-700">
+          Unforgettable Events, Seamless Execution. Trust us for event planning.
+          </p>
+          <div className="flex justify-center">
+            <div className="sm:grid grid-cols-1 sm:justify-center md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              {event.map((item) => (
+                <div
+                  key={item.name}
+                  onClick={() => {
+                    setOpen(true);
+                    setObject(item);
+                  }}
+                  className="flex"
+                >
+                  <Card obj={item} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         </section>
 

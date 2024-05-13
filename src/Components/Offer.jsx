@@ -20,6 +20,8 @@ import tech3 from '../assets/tech3.jpg'
 import tech4 from '../assets/tech4.webp'
 import cleaning from '../assets/cleaning.jpeg'
 import mot from '../assets/mot.jpg'
+import window from '../assets/window.jpeg'
+import office from "../assets/office.png"
 
 const content = [
   {
@@ -121,6 +123,15 @@ const cleaningServ = [
     image: cleaning,
     name: "Cleaning Services",
     desc: "The company offers comprehensive cleaning services, including residential and commercial cleaning, deep cleaning, sanitation, organizing, and eco-friendly cleaning solutions."
+  },
+  {
+    image: office,
+    name: "Office Cleaning",
+    desc: "Revitalize Your Workspace! We deliver top-tier office cleaning solutions. Elevate cleanliness and productivity. Reach out for a spotless office!"
+  },{
+    image: window,
+    name: "Windows Cleaning",
+    desc: "Sparkling Windows Guaranteed, we offer expert window cleaning services. Trust us for crystal-clear windows. Contact us today!"
   }
 ]
 
